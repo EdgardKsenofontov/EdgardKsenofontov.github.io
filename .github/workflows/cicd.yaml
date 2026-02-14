@@ -23,7 +23,7 @@ jobs:
         run: mypy app.py
 
   deploy:
-    name: Развертываение на сервере
+    name: Развертывание на сервере
     runs-on: ubuntu-latest
     steps:
       - name: Подключение к серверу
@@ -31,7 +31,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: student
-          key: ${{ secrets.SHH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           passphrase: 123
           script: |
             whoami
